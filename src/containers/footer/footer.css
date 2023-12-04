@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem;
 
@@ -48,10 +48,9 @@
 .footer-links {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
-
+    flex-wrap: nowrap;
     width: 100%;
     text-align: left;
 }

@@ -3,12 +3,12 @@ import Feature from '../../components/feature/Feature';
 import './builder.css'
 
 const Builder = () => (
-    <div className="builder section__margin" >
+    <div className="builder section__margin" style={{color:'white'}} >
     <div className="builder-feature">
       <Feature title="Why You Need Cover Letter Builder" text="A Cover Letter Builder streamlines your job application by helping you create a compelling narrative that showcases your unique skills and passion, making you stand out in the competitive job market." />
     </div>
     <div className="builder-heading">
-      <h1 className="gradient__text">Land Your Dream Job: Optimise Your Application with a Customised Cover Letter!</h1>
+      <h1 className>Land Your Dream Job: Optimise Your Application with a Customised Cover Letter!</h1>
       <p>Explore the Cover Letter Builder</p>
     </div>
     <div className="builder-container">

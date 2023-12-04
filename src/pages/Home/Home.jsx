@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Builder, Footer, Header } from "../../containers";
+import { Navbar } from "../../components";
 
 class Home extends Component {
     state = {  } 

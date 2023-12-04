@@ -8,6 +8,8 @@ import PdfReader from './pages/resumeBuilder/resumeBuilder'
 import CoverLetterGenerator from './pages/coverLetterGenerator/coverletterGenerator'
 import Home from './pages/Home/Home'
 import Contact from './pages/contact/Contact'
+import SignIn from './pages/SignIn/SignIn'
+import SignUp from './pages/SignUp/SignUp'
 
 const App = () => {
   return (
@@ -15,7 +17,7 @@ const App = () => {
      <Router>
      <div className="App">
        <div className="gradient__bg">
-         <Navbar />
+        <Navbar/>
          <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
@@ -25,9 +27,13 @@ const App = () => {
           <Routes>
             <Route path="/contact" element={<><Contact /><Footer /></>} />
           </Routes>
-          <Header />
-          <Builder/>
-         <Footer />
+          <Routes>
+            <Route path="/SignIn" element={<><SignIn/></>} />
+          </Routes>
+          <Routes>
+            <Route path="/signUp" element={<><SignUp/></>} />
+          </Routes>
+          
        </div>
      </div>
    </Router>

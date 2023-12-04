@@ -90,8 +90,9 @@ function PdfReader() {
               const response = await axios.post(
                 'https://api.openai.com/v1/engines/davinci/completions',
                 {
-                  prompt: `I am applying for this position ${input1} in the company ${input2} and the job description is ${input3} Please Write a cover letter based on the following resume:\n${resumeText}  write for over 200 words only the content`,
-                  max_tokens: 200, // Adjust as needed
+                  prompt: `Write a cover letter based on the model cover letter the company name is ${input1}. The Job description is ${input3}`,
+                  max_tokens: 1000, // Adjust as needed
+                  temperature: 0.4,
                 },
                 {
                   headers: {
@@ -101,7 +102,8 @@ function PdfReader() {
                   },
                 }
               );
-
+              console.log(pdfText)
+              console.log('API Response:', response.data);
               setCoverLetter(response.data.choices[0]?.text || 'No response from API');
             } catch (error) {
               console.error('Error generating cover letter:', error);
@@ -122,7 +124,8 @@ function PdfReader() {
   
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 " style={{zIndex: 1000,paddingTop:'3rem'}}>
+            <h2 style={{textAlign:'center', color: 'white', paddingBottom: '5rem'}}>Resume Builder</h2>
       <div className="row">
         <div className="col-md-6">
           <label htmlFor="fileInput" className="custom-file-upload" style={{color:'white'}}>
@@ -192,8 +195,14 @@ function PdfReader() {
       <div className="row mt-4">
       <div className="col-md-12" style={{ height: '100vh' }}>
         <h2 style={{ color: 'white', textAlign: 'center' }}>Generated Cover letter</h2>
-        <div style={{ background: 'white', padding: '10px', borderRadius: '5px', overflow: 'auto', height: '100vh', whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
-          <pre>{coverLetter}</pre>
+        <div className="col-md-12">
+          <textarea
+            className="form-control"
+            id="coverletter"
+            value={coverLetter}
+            style={{ background: 'white', padding: '10px', borderRadius: '5px', overflow: 'auto', height: '100vh' }}
+          />
+
         </div>
       </div>
     </div>

@@ -40,9 +40,8 @@
 .builder-heading {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    
     margin: 4rem 0 2rem;
 }
 
@@ -61,6 +60,7 @@
     line-height: 30px;
     color: var(--color-subtext);
     cursor: pointer;
+    padding-left: 6rem;
 }
 
 .builder-container {
