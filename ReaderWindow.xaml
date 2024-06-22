@@ -1,0 +1,15 @@
+﻿<Window x:Class="_301335487_Paramasivam__Lab_2.ReaderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_301335487_Paramasivam__Lab_2" xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF"
+                xmlns:pdf="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF"
+        mc:Ignorable="d"
+        Title="ReaderWindow" Height="450" Width="800">
+    <Grid Margin="57,23,107,48">
+        <pdf:PdfViewerControl x:Name="pdfViewer" Margin="47,45,39,58" />
+        <Button Content="Bookmark" HorizontalAlignment="Right" Click="BookmarkButton_Click" RenderTransformOrigin="2.032,5.838" Margin="0,315,349,10"/>
+
+    </Grid>
+</Window>
